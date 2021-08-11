@@ -10,6 +10,8 @@ public class SystemPropertiesTests {
     void test1() {
 
         System.out.println("Test1 browser   " + System.getProperty("browser"));
+        System.out.println("Test1 version   " + System.getProperty("version"));
+
 
 
     }
