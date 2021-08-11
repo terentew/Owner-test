@@ -1,2 +1,2 @@
 # HW10
- Jenkis + owner
+ Jenkins + owner
