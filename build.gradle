@@ -56,11 +56,14 @@ task properties_tests(type: Test) {
     systemProperties(System.getProperties())
 
     println "[build.gradle]: properties tests here"
-    println "[build.gradle]: " + System.getProperty("browser")
-    println "[build.gradle]: " + System.getProperty("version")
+    println "[build.gradle]: " + System.getProperty("login")
+    println "[build.gradle]: " + System.getProperty("password")
 
 
 //    useJunitPlatform {
     //      includeTags 'properties'
     //   }
+
+
+
 }
