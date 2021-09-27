@@ -40,6 +40,7 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
+    systemProperties(System.getProperties())
     useJUnitPlatform()
 
     testLogging {
@@ -53,17 +54,18 @@ tasks.withType(Test) {
 
 task properties_tests(type: Test) {
 
-    systemProperties(System.getProperties())
+//    systemProperties(System.getProperties())
 
     println "[build.gradle]: properties tests here"
     println "[build.gradle]: " + System.getProperty("login")
     println "[build.gradle]: " + System.getProperty("password")
+    println "TestBase   "+System.getProperty("selenoidRemote")
+
 
 
 //    useJunitPlatform {
     //      includeTags 'properties'
     //   }
-
 
 
 }
