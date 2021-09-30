@@ -22,6 +22,8 @@ public class TestBase {
         Configuration.startMaximized = true;
         String login = credentials.login();
         String password = credentials.password();
+        System.out.println(login);
+        System.out.println(password);
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
@@ -29,10 +31,10 @@ public class TestBase {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
+
         Configuration.remote = format("https://%s:%s@" + System.getProperty("selenoidRemoteURL"), login, password);
         // Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
-        Configuration.remote = System.getProperty("selenoidRemoteURL");
-        System.out.println("TestBase   " + System.getProperty("selenoidRemote"));
+        System.out.println("TestBase   " + System.getProperty("selenoidRemoteURL"));
     }
 
     @AfterEach
